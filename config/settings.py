@@ -138,8 +138,8 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
 ]
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "http://kiperformra2425-blog.s3-website-ap-northeast-1.amazonaws.com/" ]
-CSRF_TRUSTED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "http://kiperformra2425-blog.s3-website-ap-northeast-1.amazonaws.com/" ]
+CORS_ALLOWED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "http://kiperformra2425-blog.s3-website-ap-northeast-1.amazonaws.com" ]
+CSRF_TRUSTED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "http://kiperformra2425-blog.s3-website-ap-northeast-1.amazonaws.com" ]
 CSRF_COOKIE_SAMESITE = "None"
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_NAME = "csrftoken"
