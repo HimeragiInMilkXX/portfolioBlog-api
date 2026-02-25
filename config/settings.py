@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-!b^50!wywd6o#=2+z*e4ed2h42fei8!g%ulyl&%5eqqc03)1b@
 DEBUG = True
 
 # ALLOWED_HOSTS = [ "127.0.0.1", "localhost" ]
-ALLOWED_HOSTS = ["portfolioblog-api.onrender.com", "127.0.0.1", "localhost", "portfolioblog-view.onrender.com" ]
+ALLOWED_HOSTS = ["portfolioblog-api.onrender.com", "127.0.0.1", "localhost", "kiperformra2425-blog.s3-website-ap-northeast-1.amazonaws.com" ]
 
 
 # Application definition
@@ -131,11 +131,23 @@ STATIC_ROOT = BASE_DIR / "staticfiles" #w
 
 # CORS STUFF
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "content-type",
+    "x-csrftoken",
+    "x-requested-with",
+]
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "https://portfolioblog-view.onrender.com" ]
-CSRF_TRUSTED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "https://portfolioblog-view.onrender.com" ]
+CORS_ALLOWED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "http://kiperformra2425-blog.s3-website-ap-northeast-1.amazonaws.com/" ]
+CSRF_TRUSTED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "http://kiperformra2425-blog.s3-website-ap-northeast-1.amazonaws.com/" ]
+CSRF_COOKIE_SAMESITE = "None"
+CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_NAME = "csrftoken"
 CSRF_COOKIE_HTTPONLY = False
+
+SESSION_COOKIE_SAMESITE = "None"
+SESSION_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 REST_FRAMEWORK = {
 
