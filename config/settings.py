@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-!b^50!wywd6o#=2+z*e4ed2h42fei8!g%ulyl&%5eqqc03)1b@
 DEBUG = True
 
 # ALLOWED_HOSTS = [ "127.0.0.1", "localhost" ]
-ALLOWED_HOSTS = ["portfolioblog-api.onrender.com", "127.0.0.1", "localhost" ]
+ALLOWED_HOSTS = ["portfolioblog-api.onrender.com", "127.0.0.1", "localhost", "portfolioblog-view.onrender.com" ]
 
 
 # Application definition
@@ -132,8 +132,8 @@ STATIC_ROOT = BASE_DIR / "staticfiles" #w
 # CORS STUFF
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com" ]
-CSRF_TRUSTED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com" ]
+CORS_ALLOWED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "https://portfolioblog-view.onrender.com" ]
+CSRF_TRUSTED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com", "https://portfolioblog-view.onrender.com" ]
 CSRF_COOKIE_NAME = "csrftoken"
 CSRF_COOKIE_HTTPONLY = False
 
