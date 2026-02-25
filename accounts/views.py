@@ -9,6 +9,7 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.permissions import IsAuthenticated
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.http import JsonResponse
+from django.middleware.csrf import get_token
 
 from .models import UserProfile
 from .serializers import (
@@ -140,4 +141,5 @@ class ProfileUpdateView( APIView ):
 
 @ensure_csrf_cookie
 def csrf(request):
-    return JsonResponse( { "detail": "CSRF cookie set" })
+    token = get_token(request)
+    return JsonResponse( { "csrfToken": token })
