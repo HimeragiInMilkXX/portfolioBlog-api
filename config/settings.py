@@ -132,8 +132,8 @@ STATIC_ROOT = BASE_DIR / "staticfiles" #w
 # CORS STUFF
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [ "http://localhost:3000" ]
-CSRF_TRUSTED_ORIGINS = [ "http://localhost:3000" ]
+CORS_ALLOWED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com" ]
+CSRF_TRUSTED_ORIGINS = [ "http://localhost:3000", "https://portfolioblog-api.onrender.com" ]
 CSRF_COOKIE_NAME = "csrftoken"
 CSRF_COOKIE_HTTPONLY = False
 
