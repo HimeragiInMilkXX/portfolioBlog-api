@@ -1,0 +1,16 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Python / Django
+venv/
+__pycache__/
+*.py[cod]
+db.sqlite3
+staticfiles/
+media/
+
+# Environment
+.env
